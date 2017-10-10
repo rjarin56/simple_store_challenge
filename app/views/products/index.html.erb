@@ -31,3 +31,13 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+
+<p>There are <%= @products.count %> unique products in the database</p>
+
+<p>The average price of the products in the database is <%= @products.average(:price) %> </p>
+
+<p>The overall quantity of stock in the inventory is <%= @products.sum(:stock_quantity) %></p>
+
+<% 100.times do |c| %>
+<p>Chunky Bacon</p>
+<% end %>
